@@ -40,5 +40,6 @@ def send_message(msg):
     requests.post(url, json=payload)
 
 if __name__ == "__main__":
-    pass
+    port = int(od.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
     
